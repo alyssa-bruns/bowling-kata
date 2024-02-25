@@ -1,5 +1,6 @@
 export {scoreFrame}
 
 function scoreFrame (frame) {
-    return 0
+    let frameScore = frame[0] + frame[1]
+    return frameScore
 }
