@@ -31,10 +31,31 @@ test('scores a gutterball frame', () => {
   test('scores a spare frame', () => {
     //arange
     const frames = [[2, 8],[3, 6],[2, 3]]
-    const expected = 13
+    const expected = [13, 9, 5]
     //act
     const actual = score.scoreFrame(frames)
     //assert
     expect(actual).toBe(expected)
 })
+
+    test('scores a strike frame', () => {
+    //arange
+    const frames = [[10, 0],[3, 6],[2, 3]]
+    const expected = [19, 9, 5]
+    //act
+    const actual = score.scoreFrame(frames)
+    //assert
+    expect(actual).toBe(expected)
+})
+
+test('scores a double strike frame', () => {
+    //arange
+    const frames = [[10, 0],[10, 0],[2, 3]]
+    const expected = [22, 15, 5]
+    //act
+    const actual = score.scoreFrame(frames)
+    //assert
+    expect(actual).toBe(expected)
+})
+
 
