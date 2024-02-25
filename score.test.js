@@ -8,19 +8,33 @@ test('test setup working', () => {
 
 test('scores a gutterball frame', () => {
     //arrange
-    const frame = [0, 0]
+    const frames = [0, 0]
     const expected = 0
 
     //act
-    const actual = score.scoreFrame(frame)
+    const actual = score.scoreFrame(frames)
   
     //assert
     expect(actual).toBe(expected)
   })
 
   test('scores a normal frame', () => {
-    const frame = [2, 3]
+    //arrange
+    const frames = [2, 3]
     const expected = 5
-    const actual = score.scoreFrame(frame)
+    //act
+    const actual = score.scoreFrame(frames)
+    //assert
     expect(actual).toBe(expected)
   })
+
+  test('scores a spare frame', () => {
+    //arange
+    const frames = [[2, 8],[3, 6],[2, 3]]
+    const expected = 13
+    //act
+    const actual = score.scoreFrame(frames)
+    //assert
+    expect(actual).toBe(expected)
+})
+
