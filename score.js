@@ -28,7 +28,7 @@ function scoreFrame(array) {
          console.log(frameScore)
          })
     }
-    return newArray 
+    return newArray[0]
 }
   
  
